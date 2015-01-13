@@ -9,10 +9,11 @@ library(shiny)
 
 shinyUI(basicPage(
   
-  
   tags$head(
     tags$style("body {background-color: #f6f6f6; }")
   ),
+  
+  uiOutput("probMap"),
   
   selectInput("pollutant",
               "Pollutant:",
@@ -26,8 +27,5 @@ shinyUI(basicPage(
                    "70 ppb" = "70",
                    "65 ppb" = "65"),
                  selected = "75")
-  ),
-  
-  
-    uiOutput("probMap")
+  )
 ))
