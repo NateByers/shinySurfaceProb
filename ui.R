@@ -10,6 +10,10 @@ library(shiny)
 shinyUI(pageWithSidebar(
   
   sidebarPanel(
+    tags$head(
+      tags$style("body {background-color: #f6f6f6; }")
+    ),
+    
     selectInput("pollutant",
                 "Pollutant:",
                 c("Ozone" = "o3",
@@ -26,6 +30,9 @@ shinyUI(pageWithSidebar(
   ),
   
   mainPanel(
+    tags$head(
+      tags$style("body {background-color: #f6f6f6; }")
+    ),
     uiOutput("probMap")
   )
 ))
