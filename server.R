@@ -19,4 +19,8 @@ shinyServer(function(input, output) {
     tags$img(src= url)
   })
   
+  output$legend <- renderUI({
+    tags$img(src= "https://raw.githubusercontent.com/LADCO/NetAssessApp/eric/www/images/probLegend.png")
+  })
+  
 })

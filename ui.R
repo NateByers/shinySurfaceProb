@@ -9,11 +9,13 @@ library(shiny)
 
 shinyUI(basicPage(
   
-  tags$head(
-    tags$style("body {background-color: #f6f6f6; }")
-  ),
+#   tags$head(
+#     tags$style("body {background-color: #f6f6f6; }")
+#   ),
   
   uiOutput("probMap"),
+  
+  uiOutput("legend"),
   
   selectInput("pollutant",
               "Pollutant:",
